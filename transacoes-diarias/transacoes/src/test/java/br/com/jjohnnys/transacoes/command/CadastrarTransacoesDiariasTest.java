@@ -2,6 +2,7 @@ package br.com.jjohnnys.transacoes.command;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -21,7 +22,7 @@ import br.com.jjohnnys.importacao_transacoes_diarias.command.interceptors.Import
 
 public class CadastrarTransacoesDiariasTest {
 
-   /*  private FixtureConfiguration fixture;
+   private FixtureConfiguration fixture;
 
 
     @BeforeEach
@@ -78,10 +79,10 @@ public class CadastrarTransacoesDiariasTest {
     private List<TransacaoDiaria> criarTransacaoDiaria() {
 
         List<TransacaoDiaria> transacoesDiaria = new ArrayList<>(); 
-            transacoesDiaria.add(new TransacaoDiaria("Itau", "0554", "825222", "City", "5554", "911144", "27-09-2022", "1200"));
-            transacoesDiaria.add(new TransacaoDiaria("Bradesco", "9677", "882266", "City", "5554", "Santander", "28-09-2022", "1000"));
+            transacoesDiaria.add(new TransacaoDiaria("Itau", "0554", "825222", "City", "5554", "911144", "27-09-2022", new BigDecimal("1200")));
+            transacoesDiaria.add(new TransacaoDiaria("Bradesco", "9677", "882266", "City", "5554", "Santander", "28-09-2022", new BigDecimal("1000")));
 
         return transacoesDiaria;
-    } */
+    }
     
 }

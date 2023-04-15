@@ -19,6 +19,14 @@ public interface ContaTransacaoDiariaRepository extends MongoRepository<ContaTra
     })
     public AggregationResults<Map> buscarContasSuspeitas(int mes);
 
+
+    @Aggregation(pipeline = {
+        "{$match: { $expr: {'$eq': [{'$month': '$dataTransacao'},?0]}}}",
+        "{$group : { _id: {banco: '$banco', agencia: '$agencia', total : {$sum: '$valor'}}}}",
+        "{$match: {'_id.total': { '$gt': " + ParametrosDeBusca.VALOR_AGENCIA_SUSPEITA  + "}}}"
+    })
+    public AggregationResults<Map> buscarAgenciasSuspeitas(int mes);
+
     
     
 }

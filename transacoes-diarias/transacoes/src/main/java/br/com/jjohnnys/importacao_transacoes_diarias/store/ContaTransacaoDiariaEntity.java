@@ -9,11 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.FieldType;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Value;
 
 @Document(collection = "conta_transacao_diaria")
-@Data
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ContaTransacaoDiariaEntity {

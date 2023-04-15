@@ -1,5 +1,7 @@
 package br.com.jjohnnys.importacao_transacoes_diarias.command.core;
 
+import java.math.BigDecimal;
+
 import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
@@ -30,7 +32,7 @@ public class TransacaoDiaria {
     @NotBlank(message = "Data da transação é obrigatório")
     private String data;
     
-    @NotBlank(message = "Data da transação é obrigatório")
-    private String valor;
+    @NotBlank(message = "Valor da transação é obrigatório")
+    private BigDecimal valor;
 
 }
